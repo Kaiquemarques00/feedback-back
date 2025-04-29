@@ -5,6 +5,8 @@ import authMiddleware from "../middleware/auth.js";
 const prisma = new PrismaClient();
 const router = express.Router();
 
+console.log(Object.keys(new PrismaClient())); // Veja se aparece 'question'
+
 router.post("/", async (req, res) => {
   const { name, email, question } = req.body;
   if (!question) return res.status(400).json({ error: "Dúvida é obrigatória." });
