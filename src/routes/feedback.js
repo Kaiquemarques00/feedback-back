@@ -44,7 +44,6 @@ router.get("/", authMiddleware, async (req, res) => {
   }
 });
 
-// Média das notas
 router.get("/average", async (req, res) => {
   const result = await prisma.feedback.aggregate({
     _avg: { note: true },
