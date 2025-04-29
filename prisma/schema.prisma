@@ -17,9 +17,8 @@ model Feedback {
 }
 
 model Question {
-  id       Int      @id @default(autoincrement())
-  name     String?
-  email    String?
-  question String
+  id        Int      @id @default(autoincrement())
+  name      String?
+  question  String
   createdAt DateTime @default(now())
 }
